@@ -3,7 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <!-- bean definitions here -->
+<!--
+     bean definitions here
+-->
     <bean id="factory" class="com.project.tms.FactoryMethod" factory-method="getInstance"/>
     <util:properties id="props">
         <prop key="driverClassName">com.mysql.jdbc.Driver</prop>
@@ -14,4 +16,5 @@
     <bean id ="db" class="com.project.tms.db.DataBaseConfig">
         <property name="properties" ref="props"/>
     </bean>
+
 </beans>
